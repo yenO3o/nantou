@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌲 我的南投兩天一夜 🌲</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            line-height: 1.7;
+            color: #565656;
+            background-color: #f0fff5; /* Changed background color for a nature theme */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 2px solid #cce7ff; /* Changed border color */
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #2e8b57; /* Changed title color */
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 20px;
+            color: #1e90ff;
+            border-bottom: 2px dashed #cce7ff;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #4682b4; /* Changed subtitle color */
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 15px;
+            border: 2px solid #cce7ff;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 14px 18px;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid #cce7ff;
+        }
+        th {
+            background-color: #f0f8ff; /* Changed header background */
+            font-weight: 700;
+            color: #4682b4;
+            width: 120px;
+        }
+        tr:last-child td { border-bottom: none; }
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #2e8b57;
+        }
+        .notes strong { color: #ff6347; }
+        .tab-nav {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            border-bottom: 3px solid #2e8b57;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            -webkit-overflow-scrolling: touch;
+        }
+        .tab-nav::-webkit-scrollbar { height: 4px; }
+        .tab-nav::-webkit-scrollbar-thumb { background: #cce7ff; border-radius: 10px; }
+        .tab-button {
+            padding: 12px 20px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 1em;
+            font-weight: 700;
+            color: #565656;
+            border-radius: 10px 10px 0 0;
+            margin-right: 5px;
+            margin-bottom: -3px;
+            border: 3px solid transparent;
+        }
+        .tab-button:hover { background-color: #cce7ff; }
+        .tab-button.active {
+            background-color: #ffffff;
+            color: #2e8b57;
+            border-color: #2e8b57 #2e8b57 #ffffff;
+        }
+        .tab-content { display: none; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .tab-content.active { display: block; }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px 15px; border-radius: 0; box-shadow: none; border: none; }
+            body { padding: 0; background-color: #ffffff; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.6em; }
+            h3 { font-size: 1.4em; }
+            .tab-nav { justify-content: flex-start; }
+            .tab-button { padding: 10px 15px; font-size: 0.9em; margin-right: 3px; }
+            th, td { padding: 10px 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚗 南投兩天一夜輕旅行 🌲</h1>
+        <p style="text-align:center; font-size: 1.1em; color: #6c757d;">南投放鬆之旅</p>
+
+        <div class="tab-nav">
+            <button class="tab-button" data-tab="day1">Day 1</button>
+            <button class="tab-button" data-tab="day2">Day 2</button>
+        </div>
+
+        <!-- Day 1 Content -->
+        <div id="day1" class="tab-content">
+            <h3>Day 1: 彰化高鐵 → 員林 → 溪頭</h3>
+            <table>
+                <tr><th>10:30</th><td><strong>集合</strong><br><strong>地點：</strong> <a href="https://www.google.com/maps/search/?api=1&query=彰化高鐵站" target="_blank">彰化高鐵站</a><br><strong>備註：</strong> 9:19 板橋 → 10:27 彰化</td></tr>
+                <tr><th>11:30</th><td><strong>午餐 - 肉圓</strong><br><strong>地點：</strong> 員林 (<a href="https://www.google.com/maps/search/?api=1&query=員林彰化劉肉圓" target="_blank">彰化劉肉圓</a>、<a href="https://www.google.com/maps/search/?api=1&query=正宗員林肉圓" target="_blank">正宗員林肉圓</a>)</td></tr>
+                <tr><th>13:30</th><td><strong>溪頭走走</strong><br><strong>地點：</strong> <a href="https://www.google.com/maps/search/?api=1&query=溪頭自然教育園區" target="_blank">溪頭自然教育園區</a><br><strong>備註：</strong> 享受大自然，累了就回去吃飯</td></tr>
+                <tr><th>17:30</th><td><strong>飯店 Check in</strong><br><strong>地點：</strong> <a href="https://www.google.com/maps/search/?api=1&query=孟宗山莊" target="_blank">孟宗山莊</a><br><strong>備註：</strong> 可以休息一下再出門</td></tr>
+                <tr><th>18:30</th><td><strong>晚餐</strong><br><strong>地點：</strong> <a href="https://www.google.com/maps/search/?api=1&query=溪頭和雅谷餐廳" target="_blank">溪頭和雅谷餐廳</a><br><strong>備註：</strong> 從飯店開車一小段 (7km、13分鐘)</td></tr>
+            </table>
+        </div>
+
+        <!-- Day 2 Content -->
+        <div id="day2" class="tab-content">
+            <h3>Day 2: 杉林溪 → 紫南宮 → 歸途</h3>
+            <table>
+                <tr><th>08:00</th><td><strong>早餐時間</strong><br><strong>地點：</strong> <a href="https://www.google.com/maps/search/?api=1&query=孟宗山莊" target="_blank">孟宗山莊</a><br><strong>備註：</strong> 飯店早餐</td></tr>
+                <tr><th>09:00</th><td><strong>健行</strong><br><strong>地點：</strong> <a href="https://www.google.com/maps/search/?api=1&query=杉林溪森林生態園區" target="_blank">杉林溪森林生態園區</a><br><strong>備註：</strong> 可走友善路線</td></tr>
+                <tr><th>13:00</th><td><strong>午餐</strong><br><strong>地點：</strong> <a href="https://www.google.com/maps/search/?api=1&query=杉林溪森林生態園區" target="_blank">杉林溪森林生態園區</a><br><strong>備註：</strong> 園區內各點都有得吃</td></tr>
+                <tr><th>15:30</th><td><strong>繼續健行</strong><br><strong>地點：</strong> <a href="https://www.google.com/maps/search/?api=1&query=杉林溪森林生態園區" target="_blank">杉林溪森林生態園區</a><br><strong>備註：</strong> 累了隨時可以烙跑</td></tr>
+                <tr><th>16:30</th><td><strong>紫南宮走走</strong><br><strong>地點：</strong> <a href="https://www.google.com/maps/search/?api=1&query=竹山紫南宮" target="_blank">竹山紫南宮</a><br><strong>備註：</strong> 拿個發財金</td></tr>
+                <tr><th>18:00</th><td><strong>晚餐 - 甕缸雞</strong><br><strong>地點：</strong> <a href="https://www.google.com/maps/search/?api=1&query=35甕缸雞紫南宫店" target="_blank">35甕缸雞紫南宫店</a><br><strong>備註：</strong> 就在紫南宮隔壁</td></tr>
+                <tr><th>20:00</th><td><strong>準備回程</strong><br><strong>地點：</strong> <a href="https://www.google.com/maps/search/?api=1&query=彰化高鐵站" target="_blank">彰化高鐵站</a><br><strong>備註：</strong> 快樂的時光總是過得特別快～</td></tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            function switchTab(activeButton) {
+                tabButtons.forEach(button => {
+                    button.classList.remove('active');
+                });
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                const targetId = activeButton.getAttribute('data-tab');
+                const targetContent = document.getElementById(targetId);
+
+                activeButton.classList.add('active');
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            }
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => switchTab(button));
+            });
+
+            if (tabButtons.length > 0) {
+                switchTab(tabButtons[0]);
+            }
+        });
+    </script>
+
+</body>
+</html>
